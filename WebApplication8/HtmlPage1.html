@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        function Fibonacci (amount)
+        {
+            var x;
+            var numArray = [1, 1];
+            for(x = 2; x < (amount); x++)
+            {
+                numArray[x] = numArray[x - 1] + numArray[x - 2];
+                
+            }
+
+            for(x=0; x < (amount); x++)
+            {
+                document.write(numArray[x] +"</br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="numberTextBox" />
+        <input type="button" value="Fibonacci Series" id="fibonacciBtn" onclick="Fibonacci(document.getElementById('numberTextBox').value);" />
+    </form>
+</body>
+</html>
